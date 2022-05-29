@@ -6,15 +6,6 @@
 # Написать подобную ф-ю fib_list(n) которая возвращает список с элементами последовательности.
 # Вызов ф-и fib_list(3) вернет список [0, 1, 1]
 def fib_generator(n):
-    lst = []
-    for i in range(n):
-        if i == 0 or i == 1:
-            lst.append(i)
-        else:
-            lst.append(lst[i - 1] + lst[i - 2])
-        yield lst[i]
-
-def fib_list(n):
     fib_lst = []
     for i in range(n):
         if i == 0 or i == 1:
@@ -24,8 +15,4 @@ def fib_list(n):
 
     return fib_lst
 
-g = fib_generator(7)
-for i in g:
-    print(i)
-
-print(fib_list(7))
+print(fib_generator(20))
